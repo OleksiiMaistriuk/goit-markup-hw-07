@@ -22,8 +22,6 @@
   color: $text-dark-theme-color;
 }
 .footer-address-link {
-  font-weight: normal;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -94,6 +92,7 @@
   flex-direction: column;
   margin-left: auto;
   button {
+    @extend %button;
     padding: 10px 28px 10px 28px;
     display: flex;
     align-items: center;

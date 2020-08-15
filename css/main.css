@@ -75,6 +75,13 @@ input {
   }
 }
 
+.form-field, .form-label, .form-field-comment-label {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
 .conteiner {
   padding-left: 15px;
   padding-right: 15px;
@@ -150,15 +157,6 @@ input {
 .modal-send {
   display: flex;
   justify-content: center;
-}
-
-.form-field,
-.form-label,
-.form-field-comment-label {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: #757575;
 }
 
 .form-field {
@@ -296,9 +294,7 @@ input {
   color: #2196f3;
 }
 
-.footer-right button,
-.hero-button,
-.modal-button-send {
+.modal-button-send, .hero-button, .footer-right button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -319,6 +315,11 @@ input {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+}
+
+.footer-logo .web,
+.navigation-link-logo .web {
+  color: #2196f3;
 }
 
 .clients-title,
@@ -419,11 +420,6 @@ input {
 
 .navigation-social-link-picture {
   margin-right: 10px;
-}
-
-.footer-logo .web,
-.navigation-link-logo .web {
-  color: #2196f3;
 }
 
 .hero {
@@ -697,8 +693,6 @@ input {
 }
 
 .footer-address-link {
-  font-weight: normal;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
