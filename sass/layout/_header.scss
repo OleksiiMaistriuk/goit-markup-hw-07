@@ -6,18 +6,9 @@
   align-items: center;
 }
 .navigation-link-logo {
-  margin-right: 85px;
-  font-family: $logo-font;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   color: $title-text-color;
-}
-.navigation-link-logo {
   padding-top: 24px;
   padding-bottom: 25px;
-  animation-duration: 2000ms;
-  animation-timing-function: linear;
 }
 .navigation-list,
 .navigation-adress,
