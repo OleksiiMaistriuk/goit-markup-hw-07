@@ -1,7 +1,3 @@
-.team .conteiner {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .team {
   margin-left: auto;
   margin-right: auto;
@@ -10,6 +6,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  .conteiner {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team-title {
   margin-bottom: 50px;
@@ -25,9 +25,9 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 21px;
-}
-.team-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .team-text,
 .team-item-title {
@@ -63,16 +63,18 @@
   justify-content: center;
   align-items: center;
   fill: $social-link-color;
+  &:hover,
+  &:focus {
+    fill: $text-dark-theme-color;
+    background-color: $accent-color;
+    color: $accent-color;
+  }
 }
 .team-social-link-picture {
   width: 20px;
   height: 20px;
 }
-.team-social-link:hover,
-.team-social-link:focus {
-  fill: $text-dark-theme-color;
-  background-color: $accent-color;
-}
+
 .team-social-item:not(:last-child) {
   margin-right: 10px;
 }

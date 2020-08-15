@@ -77,21 +77,7 @@ textarea {
 }
 textarea,
 input {
-  outline: 0;
-}
-
-.portfolio-filter-button:hover,
-.portfolio-filter-button:focus,
-.footer-center-social-link:hover,
-.footer-center-social-link:focus,
-.footer-address-link:hover,
-.footer-address-link:focus,
-.team-social-link:hover,
-.team-social-link:focus,
-.navigation-list-link:hover,
-.navigation-list-link:focus {
-  color: var(--accent-color);
-}
+  outline: 0;}
 @keyframes scaleButton {
   from {
     transform: scale(0);

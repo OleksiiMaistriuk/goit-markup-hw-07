@@ -5,10 +5,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -43,6 +43,14 @@
   right: 8px;
   background-color: $text-dark-theme-color;
   cursor: pointer;
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 .modal-button-send {
@@ -92,25 +100,28 @@
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-}
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  transform: translateY(-30px) translateX(-26px);
-  color: $accent-color;
-}
-
-.form-input:focus:required:valid {
-  border: 1px solid #008000;
-}
-.form-input:focus:required:invalid {
-  border: 1px solid #ff0000;
-}
-
-.form-input:hover,
-.form-input:focus,
-.form-field-comment:hover textarea,
-.form-field-comment:focus textarea {
-  border-color: $accent-color;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+  &:focus + .form-label,
+  &:not(:placeholder-shown) + .form-label {
+    transform: translateY(-30px) translateX(-26px);
+    color: $accent-color;
+  }
+  &:focus:required:valid {
+    border: 1px solid #008000;
+  }
+  &:focus:required:invalid {
+    border: 1px solid #ff0000;
+  }
+  &:hover + .form-label {
+    color: $accent-color;
+  }
+  &:hover ~ .form-svg,
+  &:focus ~ .form-svg {
+    fill: $accent-color;
+  }
 }
 .form-svg {
   position: absolute;
@@ -118,21 +129,15 @@
   left: 16px;
   transform: translateY(-50%);
 }
-.form-field-checkbox a,
-.form-field-comment-texteria:hover + .form-field-comment-label,
-.form-input:hover + .form-label {
-  color: $accent-color;
-}
 
-.backdrop-close-button:hover,
-.backdrop-close-button:focus,
-.form-input:hover ~ .form-svg,
-.form-input:focus ~ .form-svg {
-  fill: $accent-color;
-}
 .form-field-comment {
   margin-bottom: 21px;
   position: relative;
+
+  &:hover textarea,
+  &:focus textarea {
+    border-color: $accent-color;
+  }
 }
 .form-field-comment-texteria {
   width: 100%;
@@ -141,6 +146,14 @@
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  &:hover + .form-field-comment-label {
+    color: $accent-color;
+  }
+  &:focus + .form-field-comment-label,
+  &:not(:placeholder-shown) + .form-field-comment-label {
+    transform: translateY(-32px);
+    color: $accent-color;
+  }
 }
 .form-field-comment-label {
   position: absolute;
@@ -149,38 +162,33 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-.form-field-comment-texteria:focus + .form-field-comment-label,
-.form-field-comment-texteria:not(:placeholder-shown)
-  + .form-field-comment-label {
-  transform: translateY(-32px);
-  color: $accent-color;
-}
-.form-field-checkbox label {
-  margin-bottom: 29px;
-  font-size: 14px;
-  line-height: 1.71;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
 
-.form-field-checkbox input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 1px;
-  padding: 0;
-  border: 0px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.form-field-checkbox {
+  label {
+    margin-bottom: 29px;
+    font-size: 14px;
+    line-height: 1.71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 1px;
+    padding: 0;
+    border: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  input:checked + .icon {
+    background-color: $accent-color;
+    border-color: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-.form-field-checkbox input:checked + .icon {
-  background-color: $accent-color;
-  border-color: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .icon {
   display: inline-block;
   width: 15px;
@@ -189,6 +197,9 @@
   border: 1px solid black;
   border-radius: 3px;
 }
-.form-field-checkbox a {
-  margin-left: 3px;
+.form-field-checkbox {
+  a {
+    margin-left: 3px;
+    color: $accent-color;
+  }
 }

@@ -34,11 +34,18 @@
   font-size: 14px;
   line-height: 1.4;
   color: $title-text-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 .navigation-list-item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-.navigation-list-item .active::after {
+.active::after {
   display: block;
   content: '';
   width: 100%;
@@ -62,18 +69,16 @@
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
 }
 .navigation-social-link-picture {
   margin-right: 10px;
 }
-.navigation-address-link:focus,
-.navigation-address-link:hover {
-  color: $accent-color;
-  fill: $accent-color;
-}
-.navigation-list-item:not(:last-child) {
-  margin-right: 50px;
-}
+
 .footer-logo .web,
 .navigation-link-logo .web {
   color: $accent-color;
