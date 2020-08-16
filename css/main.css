@@ -674,7 +674,7 @@ input {
 }
 
 .footer-address-link:hover, .footer-address-link:focus {
-  color: .footer-address-link:hover, .footer-address-link:focus accent-color;
+  color: #2196f3;
 }
 
 .footer-address-item:not(:last-child) {
