@@ -1,6 +1,8 @@
 %modal-font {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: $text-white-theme-color;
+  @include font-stile(400, 14px, 1.14, $text-white-theme-color, 0.01em);
+}
+%position-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

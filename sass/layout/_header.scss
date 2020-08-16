@@ -2,8 +2,7 @@
   margin-left: auto;
 }
 .navigation {
-  display: flex;
-  align-items: center;
+  @extend %position-center;
 }
 .navigation-link-logo {
   color: $title-text-color;
@@ -19,12 +18,10 @@
   margin-right: 30px;
 }
 .navigation-list-link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.4;
-  color: $title-text-color;
+  @include font-stile(500, 14px, 1.4, $title-text-color);
   &:hover,
   &:focus {
     color: $accent-color;
@@ -37,8 +34,8 @@
   }
 }
 .active::after {
-  display: block;
   content: '';
+  display: block;
   width: 100%;
   height: 4px;
   background: $accent-color;
@@ -53,13 +50,8 @@
   padding-top: 32px;
   padding-bottom: 32px;
   fill: $text-white-theme-color;
-  color: $text-white-theme-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
+  @include font-stile(500, 14px, 1.2, $text-white-theme-color, 0.02em);
+  @extend %position-center;
   &:hover,
   &:focus {
     color: $accent-color;

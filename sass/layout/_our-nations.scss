@@ -6,11 +6,8 @@
 }
 .our-nations-title {
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font-stile(700, 14px, 1.14, $title-text-color);
   text-transform: uppercase;
-  color: $title-text-color;
 }
 .our-nations-list {
   display: flex;
@@ -25,9 +22,7 @@
   height: 120px;
   background-color: $button-background-color;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %position-center;
 }
 .our-nations-item:not(:last-child) {
   margin-right: 30px;

@@ -1,9 +1,5 @@
 %button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: $text-dark-theme-color;
+  @include font-stile(700, 16px, 1.87, $text-dark-theme-color, 0.06em);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: $accent-color;
   border-radius: 4px;

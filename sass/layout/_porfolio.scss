@@ -7,9 +7,7 @@
 
 .portfolio-filter-button {
   padding: 4px 22px 4px 22px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
+  @include font-stile(500, 16px, 1.6, $title-text-color);
   cursor: pointer;
   background-color: $button-background-color;
   border-style: none;
@@ -30,19 +28,14 @@
 
 .portfolio-filter-list {
   margin-bottom: 34px;
-  display: flex;
-  justify-content: center;
+  @extend %position-center;
 }
 .portfolio-filter-item:not(:last-child) {
   margin-right: 8px;
 }
 .works-item-title {
   margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: $title-text-color;
+  @include font-stile(700, 18px, 2, $title-text-color, 0.06em);
 }
 .works-list {
   display: flex;
@@ -73,9 +66,7 @@
 }
 
 .works-item-title-text {
-  font-size: 16px;
-  line-height: 1.87;
-  color: $text-white-theme-color;
+  @include font-stile(400, 16px, 1.87, $text-white-theme-color);
 }
 .works-link-overlay {
   position: relative;
@@ -83,10 +74,7 @@
 }
 .works-item-overlay-text {
   padding: 63px 24px 63px 24px;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
+  @include font-stile(400, 18px, 1.56, $text-dark-theme-color);
   background-color: $potfolio-works-overlay-color;
   position: absolute;
   width: 100%;

@@ -7,9 +7,7 @@
   margin-bottom: 50px;
 }
 .what-are-we-doing-list {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  @extend %position-center;
 }
 .what-are-we-doing-item {
   max-height: 294px;
@@ -22,15 +20,10 @@
 .what-are-we-doing-text {
   width: 100%;
   height: 70px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.3;
+  @include font-stile(700, 14px, 1.3, $text-dark-theme-color);
   text-transform: uppercase;
-  color: $text-dark-theme-color;
   background-color: rgba(47, 48, 58, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %position-center;
   position: absolute;
   bottom: 0;
 }

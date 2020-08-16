@@ -16,13 +16,9 @@
 }
 .hero-title {
   margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+  @include font-stile(900, 44px, 1.36, $text-dark-theme-color, 0.06em);
   text-align: center;
   text-transform: uppercase;
-  color: $text-dark-theme-color;
 }
 
 .hero-button {
